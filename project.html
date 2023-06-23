@@ -45,7 +45,7 @@
     
 
 
-    <!-- Navbar Start -->
+   <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="img/logo.png" alt="Value Line Consulting Limited" width="200px" height="90px">
@@ -58,16 +58,37 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
-                
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="Valuation.html" class="dropdown-item">Valuation and Advisory Services</a>
-                        <a href="property.html" class="dropdown-item">Property Management</a>
-                        <a href="estate.html" class="dropdown-item">Estate Agency</a>
-                        <a href="consultation.html" class="dropdown-item">Property Development Consulting</a>
-                    </div>
+                <ul class="nested-dropdowns">
+    
+    <li>
+        <div class="nested-dropdowns__item dropdown-toggle nav-link " data-bs-toggle="dropdown">
+            Our Services
+            </div>
+        <ul>
+            <li><a href="Valuation.html" class="dropdown-item">Valuation and Advisory Services</a></li>
+            <li><a href="property.html" class="dropdown-item">Property Management</a></li>
+            <li>
+                <div class="nested-dropdowns__item dropdown-item dropdown-toggle">
+                    Estate Agency
+                    
                 </div>
+                <ul>
+                    <li> <a href="office.html" class="dropdown-item">Office Sales & Leasing</a> </li>
+                    <li> <a href="tenant.html" class="dropdown-item">Tenant Representation</a> </li>
+                    <li><a href="retail.html" class="dropdown-item">Retail Leasing & Consultancy</a></li>
+                    <li><a href="residential.html" class="dropdown-item">Residential Sales and Leasing Services</a></li>
+                    <li><a href="land.html" class="dropdown-item">Land Sales</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="#" class="dropdown-item">Property Development Consulting</a></li>
+                    
+            
+        </ul>
+    </li>
+    
+</ul>
+                
                 <a href="project.html" class="nav-item nav-link">Insights</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
@@ -75,6 +96,7 @@
         </div>
     </nav>
     <!-- Navbar End -->
+
 
 
 
