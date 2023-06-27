@@ -25,6 +25,21 @@
     z-index: 99;
 }
 
+.social-links{
+    width: 50px;
+    text-align: center;
+   
+    display: inline;
+    top: 50%;}
+
+.social-links img{
+    width: 25px;
+    margin: 24px auto;
+    background-color: black;
+    cursor: pointer;
+
+
+}
 
 /*** Spinner ***/
 #spinner {
