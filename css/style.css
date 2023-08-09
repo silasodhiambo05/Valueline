@@ -108,7 +108,7 @@
 .nested-dropdowns li {
     cursor: pointer;
     color: black;
-    font-weight: 800;
+
     background-color: white;
 
     /* Spacing */
@@ -165,10 +165,11 @@
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
+    font-family: arial black;
     color: #202A44;
-    font-size: 15px;
-    font-style: bold;
-    font-weight: 500;
+    font-size: 14px;
+   
+    font-weight: 1500;
     text-transform: capitalize;
     outline: none;
 }
