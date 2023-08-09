@@ -108,6 +108,7 @@
 .nested-dropdowns li {
     cursor: pointer;
     color: black;
+    font-weight: 800;
     background-color: white;
 
     /* Spacing */
@@ -166,6 +167,7 @@
     padding: 25px 0;
     color: #202A44;
     font-size: 15px;
+    font-style: bold;
     font-weight: 500;
     text-transform: capitalize;
     outline: none;
