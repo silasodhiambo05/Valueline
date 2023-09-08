@@ -165,11 +165,11 @@
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
-    font-family: arial black;
+    font-family: Arial Rounded MT Black;
     color: #202A44;
-    font-size: 14px;
+    font-size: 17px;
    
-    font-weight: 1500;
+    font-weight: 600;
     text-transform: capitalize;
     outline: none;
 }
