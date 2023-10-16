@@ -710,3 +710,5 @@
 table, th, td {
   border:1px solid black;
 }
+.inset {border-style: inset;}
+.double {border-style: double;}
