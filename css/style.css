@@ -727,6 +727,7 @@ table, th, td {
 #myUL {
   list-style-type: none;
 display: flex;
+
   padding: 0;
   margin: 0;
 }
@@ -744,4 +745,12 @@ display: flex;
 
 #myUL li a:hover:not(.header) {
   background-color: #eee;
+}
+.solid {border-style: solid;}
+.box {
+  width: 370px;
+  height: 330px;
+  padding: 15px;
+  background-color: coral;
+  box-shadow: 10px 10px 5px black;
 }
