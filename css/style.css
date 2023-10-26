@@ -748,9 +748,39 @@ display: flex;
 }
 .solid {border-style: solid;}
 .box {
-  width: 370px;
-  height: 330px;
+  width: 380px;
+  height: 350px;
   padding: 15px;
   background-color: coral;
   box-shadow: 10px 10px 5px black;
 }
+.outset {border-style: outset;}
+#carousel-example-generic {
+            display: inline-block;
+        }
+
+.rcorners {
+  border-radius: 25px;
+  border: 2px solid #000435;
+  padding: 20px; 
+  width: 750px;
+  height: 4000px;  
+}
+.rcorner {
+  border-radius: 25px;
+  border: 2px solid #000435;
+  padding: 20px; 
+  width: 70px;
+  height: 30px;  
+}
+
+.rcorner hover{
+  border-radius: 25px;
+  border: 2px solid white;
+  background-color: #000435;
+  padding: 20px; 
+  width: 70px;
+  height: 30px;  
+}
+
+
