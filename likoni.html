@@ -30,6 +30,100 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  align-items: center;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 0 0 0 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
 </head>
 
 <body>
@@ -99,14 +193,14 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5">
-        <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Warehouse Spaces </h1>
+    <div class="container-fluid page-header py-5 mb-4">
+        <div class="container py-3">
+            <p class="display-3 text-white mb-3 animated slideInDown" style="text-align: center;">Spacious Godown Spaces </p>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Warehouse Spaces </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Spacious Godown Spaces</li>
                 </ol>
             </nav>
         </div>
@@ -120,50 +214,61 @@
 
             <div class="row g-0 mx-lg-0">
 
-                <h1 class="mb-0 p-lg-5" >Warehouse &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  <small>Rent per Sq ft:KES 40</small></h1>
-                <div class="col-lg-2  col-md-4 p-2 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/lw/1.jpg" alt="" style="width:100px;height: 120px;">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/lw/1.jpg" data-lightbox="portfolio" ><i class="fa fa-eye"></i></a>
-                               
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 p-2 portfolio-item second wow fadeInUp mx-lg-0" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/lw/2.jpg" alt="" style="width:100px;height: 120px;">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/lw/2.jpg" data-lightbox="portfolio" ><i class="fa fa-eye"></i></a>
-                                
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-4 p-2 img-rounded portfolio-item first wow fadeInUp mx-lg-0" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/lw/3.jpg" alt="" style="width:100px;height: 120px;">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/lw/3.jpg" data-lightbox="portfolio" ><i class="fa fa-eye"></i></a>
-                                
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+                
+               
                 <div class="col-lg-8 feature-text py-0 wow fadeIn mt-1" data-wow-delay="0.5s">
-                    <div class="p-lg-5 ps-lg-0">
-                          <h6>Property Description</h6>
-                        <p class="mb-4 pb-0" style="text-align: justify;font-size: 14px;">The property is situated on Likoni road, off Enterprise Road in Industrial Area,Nairobi.The godowns neighbours British American Tobacco (BAT), Printpark, Sansora Group, Manji Biscuits and Crown Paints.All access roads are tamarcked, the subject property is directly linked to Jogoo Road and Enterprise Road which are 1km away from the subject property, Mombasa Road is also 2.9km away from the property. </strong></p>
+                    <div class="p-lg-5 ps-lg-4 bg-white  ">
+                         <!-- Carousel Start -->
+    <div class="container">
+  <div class="mySlides">
+    <div class="numbertext ">1 / 4</div>
+    <img src="img/lw/lk.jpg" style="width:680px; height:400px">
+  </div>
 
-                        <h6>Features</h6>
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="img/lw/1.jpg" style="width:680px;  height:400px ">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="img/lw/2.jpg" style="width:680px;  height:400px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="img/lw/3.jpg" style="width:680px;  height:400px">
+  </div>
+
+ 
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+ <br>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img/lw/lk.jpg" style="width:100px;height:70px" onclick="currentSlide(1)" alt="Image">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/lw/1.jpg" style="width:100px;height:70px" onclick="currentSlide(2)" alt="Image">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/lw/3.jpg" style="width:100px;height:70px" onclick="currentSlide(3)" alt="Image">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/lw/2.jpg" style="width:100px;height:70px" onclick="currentSlide(4)" alt="Image">
+    </div>
+    
+  </div>
+</div><br><br>
+
+    <!-- Carousel End -->
+                          <h6>Property Description</h6>
+                        <p class="mb-4 pb-0" style="text-align: justify;font-size: 14px;">The property is situated on Likoni road, off Enterprise Road in Industrial Area,Nairobi.The godowns neighbours British American Tobacco (BAT), Printpark, Sansora Group, Manji Biscuits and Crown Paints.All access roads are tamarcked, the subject property is directly linked to Jogoo Road and Enterprise Road which are 1km away from the subject property, Mombasa Road is also 2.9km away from the property.</strong></p>
+
+                       
+                       <h6>Features</h6>
                         <div class=" " style="font-size: 14px;" >
                             
                                      <p  >
@@ -201,39 +306,36 @@
                         <div class=" " style="font-size: 14px;" >
                             
                                      <p  >
-                                        <i class="fa fa-check"> </i>RENT:               KShs.40/Sq.ft/Month (Negotiable)
+                                        <i class="fa fa-check"> </i>Rent:               KShs.40/Sq.ft/Month (Negotiable)
 
 
 </p>
                                         
                                     
                                         <p >
-                                        <i class="fa fa-check"> </i>ESCALATION RATE:    12% per annum on monthly rent charges</p>
+                                        <i class="fa fa-check"> </i>Escalation Rate:    12% per annum on monthly rent charges</p>
                                         
                                     
                                     <p >
-                                        <i class="fa fa-check"> </i>SERVICE CHARGE: KES   3.00 per Sq Ft  </p>
+                                        <i class="fa fa-check"> </i>Service Charge: KES   3.00 per Sq Ft  </p>
                                     
-                                        <p >
-                                        <i class="fa fa-check"> </i>ESCALATION: 10% Every 2 years</p>
-                                    <p ><i class="fa fa-check"> </i>LEASE TERM: 6 Years with an option to renew for further 6 year tenure on the same terms and conditions.
+                            
+                                    <p ><i class="fa fa-check"> </i>Lease Term: 6 Years with an option to renew for further 6 year tenure on the same terms and conditions.
  </p>
                                         
                                     
-                                     <p >   <i class="fa fa-check"> </i>SECURITY: Equivalent to 3 months’ rent to be paid together before signing DEPOSIT     the lease</p>
-                                   <p >   <i class="fa fa-check"> </i>RSURETY:         Surerity of the Directors will be required</p>
-                                        <p ><i class="fa fa-check"> </i>PAINTING:           To be done every 2 Years</p>
+                                     <p >   <i class="fa fa-check"> </i>Security: Equivalent to 3 months’ rent to be paid together before signing DEPOSIT     the lease</p>
+                                   <p >   <i class="fa fa-check"> </i>Surety:         Surerity of the Directors will be required</p>
+                                        <p ><i class="fa fa-check"> </i>Painting:           To be done every 2 Years</p>
                                         
                                     
-                                     <p >   <i class="fa fa-check"> </i>MAINTENANCE:        Internal to be borne by the Tenant</p>
-                                   <p >   <i class="fa fa-check"> </i>UTILITIES:          Services, Water and Electricity, Security to be borne by the Tenant</p>
-                                    <p >   <i class="fa fa-check"> </i>SECURITY DEPOSIT:   Equivalent to 4 months rent to be paid together before signing the lease</p>
-                                        <p ><i class="fa fa-check"> </i>SIGNAGE:        Any signage put up, al costs and legal requirements to be incurred by the Tenant</p>
+                                     <p >   <i class="fa fa-check"> </i>Maintenance:        Internal to be borne by the Tenant</p>
+                                   <p >   <i class="fa fa-check"> </i>Utilities:          Services, Water and Electricity, Security to be borne by the Tenant</p>
+                                    <p >   <i class="fa fa-check"> </i>Security Deposit:   Equivalent to 4 months rent to be paid together before signing the lease</p>
+                                        <p ><i class="fa fa-check"> </i>Signage:        Any signage put up, al costs and legal requirements to be incurred by the Tenant</p>
                                         
                                     
-                                     <p >   <i class="fa fa-check"> </i>MAINTENANCE:        Internal to be borne by the Tenant</p>
-                                   <p >   <i class="fa fa-check"> </i>UTILITIES:          Services, Water and Electricity, Security to be borne by the Tenant</p>
-                                        
+                                     
                                     
                                         <p  style="color: red;"> ( ALL RATES ARE EXCLUSIVE OF VAT)</p>
                                         
@@ -243,99 +345,341 @@
                                    
                             
                         </div><br><br>
+                        
                         <h6>Let Price: KES 40</h6>
                         <p>To arrange a viewing, WhatsApp Beatrice <a target="_blank" href="https://wa.me/+254741885285">https://wa.me/+254741885285</a></p>
                         <a >Please note that Valueline Consulting  Ltd does not charge any fees for viewings.</a><br><br><br><br>
                          <h6 class="">Property Details</h6>
-                        <p><strong>Property Id </strong>: W0002 &nbsp;&nbsp;&nbsp;&nbsp;Price: KES 40</p>
+                        <p><strong>Property Id </strong>: c0011 &nbsp;&nbsp;&nbsp;&nbsp;Let Price: KES 40</p>
                         <h6 class="mt-4" style="font-family: Roboto;font-size: 20px;">Similar Listings</h6>
                         <div class="tab-content ">
                         <div id="tab-1" class="tab-pane fade show p-0 active ">
                         <div class="row g-4">
-                             <div class="col-lg-4 col-md-6">
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="property-item rounded overflow-hidden">
                                     <div class="position-relative overflow-hidden">
-                                        <a href="katko.html"><img class="img-fluid img-rounded" src="img/katko/katko.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <a href=""><img class="img-fluid img-rounded" src="img/ws/ws.jpg" alt="" ></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">KES 80-170/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="west.html">Prime Retail and Office</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Westlands, Nairobi, Kenya</p>
+                                    </div>
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href="cube.html"><img class="img-fluid img-rounded" src="img/cube/cube.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$1.30/ sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="cube.html">Grade A Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Riverside, Kenya</p>
+                                    </div>
+                                     <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href="convex.html"><img class="img-fluid img-rounded" src="img/convex/convex.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$1.20 per sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="convex.html">Prime Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Riverside, Nairobi,Kenya</p>
+                                    </div>
+                                     <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href="manga.html"><img class="img-fluid img-rounded" src="img/manga/manga.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Rent</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">Kes 120s/ sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="manga.html">Prime Office Space</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Kiambere Road, Upper Hill, Nairobi</p>
+                                    </div>
+                                     <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href="capital.html"><img class="img-fluid img-rounded" src="img/square/square.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sell</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Office</div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">Kes 120/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="capital.html">Grade A Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Westlands, Nairobi, Kenya</p>
+                                    </div>
+                                     <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href="oval.html"><img class="img-fluid img-rounded" src="img/oval/oval.jpg" alt="" style="width:500px;height: 200px;"></a>
                                         <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Katko Complex</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
                                     </div>
                                     <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">KES 32.00 per Sq Ft </h5>
-                                        <a class="d-block h5 mb-2" href="katko.html">Spacious Godown</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Old Mombasa Road, Nairobi</p>
+                                        <h5 class="text-primary mb-3">Kes  120/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="oval.html">Prime Commercial Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Westlands, Nairobi, Kenya</p>
                                     </div>
-                                    
+                                    <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6">
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="property-item rounded overflow-hidden">
                                     <div class="position-relative overflow-hidden">
-                                        <a href="likoni.html"><img class="img-fluid img-rounded" src="img/lw/lk.jpg" alt="" style="width:500px;height: 200px;"></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sale</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Likoni Warehouse</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">KES 40.00 per Sq Ft </h5>
-                                        <a class="d-block h5 mb-2" href="likoni.html">Spacious Warehouse</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Likoni Road, Industrial Area, Nairobi</p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href="mt.html"><img class="img-fluid img-rounded" src="img/mt/mt.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <a href=""><img class="img-fluid img-rounded" src="img/jahazi/jahazi.jpeg" alt="" style="width:500px;height: 200px;"></a>
                                         <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">M&T ONE</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
                                     </div>
                                     <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3" style="text-size: 12px;">$5.5 per sqm + 10% service charge</h5>
-                                        <a class="d-block h5 mb-2" href="mt.html">Spacious Warehouse</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Nairobi, Kenya</p>
+                                        <h5 class="text-primary mb-3">$ 1.2/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="jahazi.html">Grade A Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>James Gichuru, Nairobi, Kenya</p>
                                     </div>
-                                   
+                                     <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6">
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="property-item rounded overflow-hidden">
                                     <div class="position-relative overflow-hidden">
-                                        <a href="alp.html"><img class="img-fluid img-rounded" src="img/alp/1.png" alt="" style="width:500px;height: 200px;"></a>
-                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">For Sale</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">ALP Warehouses</div>
-                                    </div>
-                                    <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3">Starting rent: $6 per sqm per month  </h5>
-                                        <a class="d-block h5 mb-2" href="alp.html">Spacious Warehouse</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Tilisi,Limuru</p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="property-item rounded overflow-hidden">
-                                    <div class="position-relative overflow-hidden">
-                                        <a href="nairobigate.html"><img class="img-fluid img-rounded" src="img/nairobigate/1.png" alt="" style="width:500px;height: 200px;"></a>
+                                        <a href=""><img class="img-fluid img-rounded" src="img/piano/piano.jpeg" alt="" style="width:500px;height: 200px;"></a>
                                         <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
-                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Nairobi Gate Industrial Park</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
                                     </div>
                                     <div class="p-4 pb-0">
-                                        <h5 class="text-primary mb-3" style="text-size: 12px;">Rent: USD 6.2/Sq M/Month</h5>
-                                        <a class="d-block h5 mb-2" href="nairobigate.html">Spacious Warehouse</a>
-                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Eastern Bypass</p>
+                                        <h5 class="text-primary mb-3">Ksh. 100/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="piano.html">Grade A Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Brookside Drive,Westlands Nairobi</p>
                                     </div>
-                                   
+                                        <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid img-rounded" src="img/place/place.jpeg" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">$ 1.20/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="place.html">Grade A Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>School Lane,Westlands Nairobi</p>
+                                    </div>
+                                       <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid img-rounded" src="img/2129/2129.png" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">Kes 100/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="2129.html">Prime Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Muthithi Road,Westlands, Nairobi</p>
+                                    </div>
+                                       <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid img-rounded" src="img/grey/2.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">Kes 80-120/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="grey.html">Prime Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Kangundo Road,Eastern ByPass, Nairobi</p>
+                                    </div>
+                                       <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid img-rounded" src="img/viewpark/1.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">Kes 75/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="view.html">Prime Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Utalii Lane, Nairobi</p>
+                                    </div>
+                                      <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid img-rounded" src="img/college/1.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">Kes 85/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="college.html">Prime Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Koinange Street, Nairobi</p>
+                                    </div>
+                                       <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid img-rounded" src="img/merchant/1.png" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">Kes 120/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="merchant.html">Prime Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i> Riverside Drive,Westlands Nairobi</p>
+                                    </div>
+                                       <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid img-rounded" src="img/gallant/1.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">Kes 120/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="gallant.html">Prime Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Utalii Lane, Nairobi</p>
+                                    </div>
+                                       <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid img-rounded" src="img/africa/1.png" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">Kes 85/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="africa.html">Prime Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Hospital Road,Upperhill Nairobi</p>
+                                    </div>
+                                       <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="property-item rounded overflow-hidden">
+                                    <div class="position-relative overflow-hidden">
+                                        <a href=""><img class="img-fluid img-rounded" src="img/hyaat/1.jpg" alt="" style="width:500px;height: 200px;"></a>
+                                        <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">To Let</div>
+                                        <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">Commercial </div>
+                                    </div>
+                                    <div class="p-4 pb-0">
+                                        <h5 class="text-primary mb-3">KES 80-170/sq ft</h5>
+                                        <a class="d-block h5 mb-2" href="hyaat.html">Prime Office Spaces</a>
+                                        <p><i class="fa fa-map-marker-alt text-primary me-2"></i>Westlands Nairobi</p>
+                                    </div>
+                                       <div class="d-flex border-top">
+                                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-ruler-combined text-primary me-2"></i>Square Footage</small>
+                                        <small class="flex-fill text-center border-end py-2"><i class=" fas fa-shield-alt text-primary me-2"></i>Security</small>
+                                        <small class="flex-fill text-center py-2"><i class="fas fa-parking text-primary me-2"></i>Parking</small>
+                                    </div>
                                 </div>
                             </div>
                           
-                            
-                            
-                            
-                            
-                             
-                            
-                            
-                            
                           
                             
                         </div>
@@ -345,9 +689,10 @@
                     
                 </div>
 
-                <div class="col-lg-4 pe-lg-0 bg-light"  >
+                <div class="col-lg-4 pe-lg-0 bg-light "  >
+                    <h5>Let Price: KES 40 per Sq Ft</h5><br><br>
                     <div class="position-relative ">
-                         <h1 class="mb-4 pb-4" style="text-align: justify;font-size: 14px;">Request Info</strong></h1>
+                         <h1 class="mb-6 pb-4" style="text-align: justify;font-size: 14px;">Request Info</strong></h1>
                          <div class="portfolio-item  wow fadeInUp mx-lg-0" data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
@@ -357,14 +702,15 @@
                         </div>
                         <h5>Beatrice Senior</h5>
                         <p>Sales and Letting Agent</p>
-                         <button class="btn-primary" onclick="window.location.href='mailto:beatrice.senior@valueline.co.ke';" style="width:80%;color: white;">
+                         <button class="" onclick="window.location.href='mailto:beatrice.senior@valueline.co.ke';" style="width:60%;color: #000435;">
                             Send Email
                          </button>
+
                          <div class="d-flex">
-                            <button class="btn-primary" onclick="window.location.href='https://wa.me/+254741885285';" style="width:40%;color: white;">
+                            <button class="" onclick="window.location.href='https://wa.me/+254741885285';" style="width:30%;color: #000435;">
                             Whatsapp
                          </button>
-                         <button class="btn-primary" onclick="window.location.href='tel:0741885285'; "  style="width:40%; color: white;">
+                         <button class="" onclick="window.location.href='tel:0741885285'; "  style="width:30%; color: #000435;">
                             Click To Call
                          </button>
                      </div>
@@ -468,6 +814,36 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 </body>
 
 </html>
