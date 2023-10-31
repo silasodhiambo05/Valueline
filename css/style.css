@@ -782,5 +782,11 @@ display: flex;
   width: 70px;
   height: 30px;  
 }
-
+.boxed {
+  width: 250px;
+  height: 450px;
+  padding: 15px;
+  background-color: coral;
+  box-shadow: 10px 10px 5px black;
+}
 
