@@ -30,6 +30,100 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  align-items: center;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 0 0 0 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
 </head>
 
 <body>
@@ -99,14 +193,14 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5">
-        <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Retail Spaces </h1>
+    <div class="container-fluid page-header py-5 mb-4">
+        <div class="container py-3">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Prime Retail Spaces </h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Retail Spaces </li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Prime Retail Spaces </li>
                 </ol>
             </nav>
         </div>
@@ -120,51 +214,44 @@
 
             <div class="row g-0 mx-lg-0">
 
-                <h1 class="mb-0 p-lg-5" >Retail Space &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  <small>Rent per Sq ft:KES 130</small></h1>
-                <div class="col-lg-2  col-md-4 p-2 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/adlife/1.jpg" alt="" style="width:100px;height: 120px;">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/adlife/1.jpg" data-lightbox="portfolio" ><i class="fa fa-eye"></i></a>
-                               
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 p-2 portfolio-item second wow fadeInUp mx-lg-0" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/adlife/1.jpg" alt="" style="width:100px;height: 120px;">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/adlife/1.jpg" data-lightbox="portfolio" ><i class="fa fa-eye"></i></a>
-                                
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-4 p-2 img-rounded portfolio-item first wow fadeInUp mx-lg-0" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/adlife/1.jpg" alt="" style="width:100px;height: 120px;">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/adlife/1.jpg" data-lightbox="portfolio" ><i class="fa fa-eye"></i></a>
-                                
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+                
+               
                 <div class="col-lg-8 feature-text py-0 wow fadeIn mt-1" data-wow-delay="0.5s">
-                    <div class="p-lg-5 ps-lg-0">
-                          <h6>Property Description</h6>
+                    <div class="p-lg-5 ps-lg-4 bg-white  ">
+                         <!-- Carousel Start -->
+    <div class="container">
+  <div class="mySlides">
+    <div class="numbertext ">1 / 2</div>
+    <img src="img/adlife/1.jpg" style="width:680px; height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 2</div>
+    <img src="img/adlife/1.jpg" style="width:680px;  height:400px ">
+  </div>
+
+  
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+ <br>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img/adlife/1.jpg" style="width:100px;height:70px" onclick="currentSlide(1)" alt="Image">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/adlife/1.jpg" style="width:100px;height:70px" onclick="currentSlide(2)" alt="Image">
+    </div>
+    
+  </div>
+</div>
+<br><br>
+    <!-- Carousel End -->
+                         <h6>Property Description</h6>
                         <p class="mb-4 pb-0" style="text-align: justify;font-size: 14px;">Situated at the heart of Kilimani, Adlife Plaza is a premier business centre combining stylish executive office suites with a hyper store, restaurants as well as various specialty shops creating a unique seamless business mix. A first of its kind in Kilimani, Adlife Plaza brings an exciting fresh dimension to the way we work and enjoy our leisure time.
 We offers retail and office space, sizes from 344 Square ft to 20,000sq ft</strong></p>
-
-                        <h6>Features</h6>
+                       <h6>Features</h6>
                         <div class=" " style="font-size: 14px;" >
                             
                                      <p  >
@@ -224,23 +311,19 @@ We offers retail and office space, sizes from 344 Square ft to 20,000sq ft</stro
                                    
                             
                         </div>
-                        <h6>Let Price: KES 130</h6>
+                        <h6>Let Price: KES 130/sq ft inclusive of Service Charge</h6>
                         <p>To arrange a viewing, WhatsApp Beatrice <a target="_blank" href="https://wa.me/+254741885285">https://wa.me/+254741885285</a></p>
                         <a >Please note that Valueline Consulting  Ltd does not charge any fees for viewings.</a><br><br><br><br>
                          <h6 class="">Property Details</h6>
-                        <p><strong>Property Id </strong>: R0001 &nbsp;&nbsp;&nbsp;&nbsp;Price: KES 130 </p>
-                        <h6 class="mt-4" style="font-family: Roboto;font-size: 20px;">Similar Listings</h6>
+                        <p><strong>Property Id </strong>: c0011 &nbsp;&nbsp;&nbsp;&nbsp;Price: KES 130</p>
+                        <h6 class="mt-4" style="font-family: Roboto;font-size: 20px;"></h6>
                         <div class="tab-content ">
                         <div id="tab-1" class="tab-pane fade show p-0 active ">
                         <div class="row g-4">
                             
-                            
-                            
-                            
-                             
-                            
-                            
-                            
+                           
+
+                          
                           
                             
                         </div>
@@ -250,9 +333,10 @@ We offers retail and office space, sizes from 344 Square ft to 20,000sq ft</stro
                     
                 </div>
 
-                <div class="col-lg-4 pe-lg-0 bg-light"  >
+                <div class="col-lg-4 pe-lg-0 bg-light "  >
+                    <h6>Let Price: KES 130/sq ft</h6><br><br>
                     <div class="position-relative ">
-                         <h1 class="mb-4 pb-4" style="text-align: justify;font-size: 14px;">Request Info</strong></h1>
+                         <h1 class="mb-6 pb-4" style="text-align: justify;font-size: 14px;">Request Info</strong></h1>
                          <div class="portfolio-item  wow fadeInUp mx-lg-0" data-wow-delay="0.1s">
                     <div class="rounded overflow-hidden">
                         <div class="position-relative overflow-hidden">
@@ -262,14 +346,15 @@ We offers retail and office space, sizes from 344 Square ft to 20,000sq ft</stro
                         </div>
                         <h5>Beatrice Senior</h5>
                         <p>Sales and Letting Agent</p>
-                         <button class="btn-primary" onclick="window.location.href='mailto:beatrice.senior@valueline.co.ke';" style="width:80%;color: white;">
+                         <button class="" onclick="window.location.href='mailto:beatrice.senior@valueline.co.ke';" style="width:60%;color: #000435;">
                             Send Email
                          </button>
+
                          <div class="d-flex">
-                            <button class="btn-primary" onclick="window.location.href='https://wa.me/+254741885285';" style="width:40%;color: white;">
+                            <button class="" onclick="window.location.href='https://wa.me/+254741885285';" style="width:30%;color: #000435;">
                             Whatsapp
                          </button>
-                         <button class="btn-primary" onclick="window.location.href='tel:0741885285'; "  style="width:40%; color: white;">
+                         <button class="" onclick="window.location.href='tel:0741885285'; "  style="width:30%; color: #000435;">
                             Click To Call
                          </button>
                      </div>
@@ -295,7 +380,7 @@ We offers retail and office space, sizes from 344 Square ft to 20,000sq ft</stro
     <!-- Feature End -->
         
  
-   <!-- Footer Start -->
+    <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -354,7 +439,6 @@ We offers retail and office space, sizes from 344 Square ft to 20,000sq ft</stro
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
@@ -372,6 +456,36 @@ We offers retail and office space, sizes from 344 Square ft to 20,000sq ft</stro
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 </body>
 
 </html>
